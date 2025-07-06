@@ -1,0 +1,238 @@
+/* ===== Global CSS Reset ===== */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset box-sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* ensures padding and border are included in element's total width and height */
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set a consistent line height and font smoothing */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif; /* optional: apply a clean default font */
+  background-color: #fff; /* optional: clean background */
+  color: #333; /* optional: default text color */
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove anchor underline and inherit color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Custom CSS Styles ===== */
+
+/* Reusable button style */
+.btn {
+  display: inline-block;
+  background-color: #1565c0; /* Blue base */
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #0d47a1;
+  transform: translateY(-2px);
+}
+
+/* ===== Home CSS Styles (index.html) ===== */
+
+/* Hero Section */
+.hero {
+  height: 80vh; /* fill most of the screen */
+  display: flex; /* top to bottom */
+  flex-direction: column; /* stack items vertically */
+  justify-content: center; /* Center vertically on main axis */
+  align-items: center; /* Center horizontally on cross axis */
+  text-align: center; /* center text */
+  background: #e3f2fd; /* Center text inside elements */
+}
+
+.hero h2 {
+  font-size: 2rem; /* larger font size for the heading */
+  margin: 1rem; /* margin for spacing */
+}
+
+.hero p {
+  font-size: 1.2rem; /* slightly larger font size for the paragraph */
+  margin-bottom: 2rem; /* margin for spacing */
+  color: #555;
+}
+
+.btn:hover {
+  background-color: #0d47a1; /* darker teal on hover */
+}
+
+/* Projects Section */
+.projects {
+  padding: 4rem 2rem;
+  background-color: #f0f4f8; /* Softer light blue-gray background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* responsive grid */
+  gap: 2rem; /* space between items */
+}
+
+.project-card {
+  background-color: #fff; /* white background for cards */
+  padding: 2rem; /* padding inside the card */
+  border-radius: 12px; /* rounded corners */
+  box-shadow: 0 4px 12px rgb(0, 0, 0, 0.08); /* subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* smooth scaling effect */
+  display: flex; /* flexbox for content alignment */
+  flex-direction: column; /* stack content vertically */
+  justify-content: space-between; /* space between items */
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* lift effect on hover */
+  box-shadow: 0 8px 20px rgb(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+.project-card h3 {
+  margin-bottom: 1rem; /* margin for spacing */
+  font-size: 1.6rem; /* larger font size for project titles */
+  color: #1565c0; /* teal color for project titles */
+}
+
+.project-card p {
+  color: #555; /* gray text for descriptions */
+  line-height: 1.5; /* line height for readability */
+}
+
+.project-card .btn {
+  margin-top: 1rem; /* margin for spacing */
+  align-self: flex-end; /* align button to the right */
+}
+
+/* Back to Top Button */
+.back-to-top {
+  width: 50px;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #1565c0;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #0d47a1;
+  transform: translateY(-3px);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Project Details pages CSS Styles ===== */
+
+.project-detail {
+  padding: 4rem 1rem;
+}
+
+.projec-detail h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1565c0;
+}
+
+.project-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.project-image {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tech-list {
+  margin-bottom: 2rem;
+  padding-left: 1.2rem;
+}
+
+.tech-list li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
