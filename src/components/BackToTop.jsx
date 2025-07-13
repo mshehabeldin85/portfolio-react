@@ -1,6 +1,6 @@
 function BackToTop() {
   return (
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+    <button className="back-to-top" onClick="scrollToTop()">↑</button>
   );
 }
 
