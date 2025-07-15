@@ -1,9 +1,9 @@
 function PortfolioProject() {
   return (
-    <section class="project-detail">
-      <div class="container">
+    <section className="project-detail">
+      <div className="container">
         <h1>Protfolio</h1>
-        <p class="project-subtitle">
+        <p className="project-subtitle">
           The portfolio site you're viewing right now. Built wih HTML, CSS, and
           Javascript.
         </p>
@@ -11,11 +11,11 @@ function PortfolioProject() {
         <img
           src="/img/portfolio-placeholder.svg"
           alt="Portfolio Screenshot"
-          class="project-image"
+          className="project-image"
         />
 
         <h3>Tech Stack:</h3>
-        <ul class="tech-list">
+        <ul className="tech-list">
           <li>HTML</li>
           <li>CSS</li>
           <li>Javascript</li>
@@ -23,7 +23,7 @@ function PortfolioProject() {
         </ul>
 
         <p>
-          <a href="/" class="btn">
+          <a href="/" className="btn">
             Back to Home
           </a>
         </p>

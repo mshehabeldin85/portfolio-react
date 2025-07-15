@@ -1,9 +1,9 @@
 function DevConnect() {
   return (
-    <section class="project-detail">
-      <div class="container">
+    <section className="project-detail">
+      <div className="container">
         <h1>Blogify</h1>
-        <p class="project-subtitle">
+        <p className="project-subtitle">
           A minimalistic blogging platform with Markdown support and a modern
           UI.
         </p>
@@ -11,11 +11,11 @@ function DevConnect() {
         <img
           src="/img/blogify-placeholder.svg"
           alt="Blogify Screenshot"
-          class="project-image"
+          className="project-image"
         />
 
         <h3>Tech Stack:</h3>
-        <ul class="tech-list">
+        <ul className="tech-list">
           <li>React.js</li>
           <li>Node.js</li>
           <li>MongoDB</li>
@@ -23,7 +23,7 @@ function DevConnect() {
         </ul>
 
         <p>
-          <a href="/" class="btn">
+          <a href="/" className="btn">
             Back to Home
           </a>
         </p>
