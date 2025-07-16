@@ -13,6 +13,7 @@ import PortfolioProject from "./pages/PortfolioProject";
 import TaskTracker from "./pages/TaskTracker";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/NotFound";
+import Layout from "./components/Layout";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,12 +37,11 @@ function App() {
         <Route
           path="/"
           element={
-            <>
-              <Navbar />
+            <Layout>
               <Hero />
               <Projects />
               <BackToTop />
-            </>
+            </Layout>
           }
         />
         <Route
@@ -57,8 +57,9 @@ function App() {
           path="/blogify"
           element={
             <>
-              <Navbar />
-              <Blogify />
+              <Layout>
+                <Blogify />
+              </Layout>
             </>
           }
         />
@@ -66,8 +67,9 @@ function App() {
           path="/portfolio-project"
           element={
             <>
-              <Navbar />
-              <PortfolioProject />
+              <Layout>
+                <PortfolioProject />
+              </Layout>
             </>
           }
         />
@@ -75,8 +77,9 @@ function App() {
           path="/tasktracker"
           element={
             <>
-              <Navbar />
-              <TaskTracker />
+              <Layout>
+                <TaskTracker />
+              </Layout>
             </>
           }
         />
@@ -84,8 +87,9 @@ function App() {
           path="*"
           element={
             <>
-              <Navbar />
-              <NotFound />
+              <Layout>
+                <NotFound />
+              </Layout>
             </>
           }
         />
